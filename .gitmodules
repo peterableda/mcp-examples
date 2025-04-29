@@ -1,0 +1,3 @@
+[submodule "iceberg-mcp-server"]
+	path = iceberg-mcp-server
+	url = git@github.com:cloudera/iceberg-mcp-server.git
