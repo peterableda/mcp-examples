@@ -1,0 +1,16 @@
+[project]
+name = "mcp-server-sse"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "iceberg-mcp-server",
+    "uv>=0.6.17",
+]
+
+[tool.uv.workspace]
+members = ["../iceberg-mcp-server"]
+
+[tool.uv.sources]
+"iceberg-mcp-server" = { workspace = true }
