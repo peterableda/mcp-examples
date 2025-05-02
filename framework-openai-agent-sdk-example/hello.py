@@ -4,7 +4,6 @@ set_tracing_disabled(True)
 
 import os
 import asyncio
-from pathlib import Path
 
 from openai import AsyncOpenAI
 from agents import Agent, Runner, OpenAIChatCompletionsModel
@@ -12,6 +11,7 @@ from agents.mcp import MCPServer, MCPServerSse
 
 # Load environment variables from .env file
 from dotenv import load_dotenv
+from pathlib import Path
 load_dotenv(dotenv_path=Path(__file__).parent.parent / ".env")
 
 API_KEY = os.getenv("API_KEY")
@@ -22,6 +22,7 @@ BASE_URL = os.getenv(
 )  # Example Cloudera AI Inference service Endpoint
 
 async def main():
+    # Connect to MCP Server
     async with MCPServerSse(
         name="Cloudera Iceberg MCP Server",
         params={
