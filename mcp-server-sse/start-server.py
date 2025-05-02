@@ -14,7 +14,7 @@ def start_mcp_server(env: dict[str,str] = {}) -> subprocess.Popen:
 
   exec_env = os.environ.copy() # inherit everything first :contentReference[oaicite:10]{index=10}
   exec_env.update(env)
-  print(exec_env)
+
   try:
     process = subprocess.Popen(
       ["uv", "run", server_script_path],
