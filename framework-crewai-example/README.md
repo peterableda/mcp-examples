@@ -22,19 +22,8 @@ Find your model name & endpoint → see [Cloudera AI inference guide](https://do
 
 ## Running the Example
 ```bash
-uv pip install .
 uv run ./hello.py
 ```
-
-This will:
-
-1) Load your .env settings.
-2) Connect to the MCP server over SSE.
-3) Initialize the OpenAI client to point at Cloudera AI Inference.
-4) Spin up an Agent that listens for context updates.
-5) Send a sample query.
-6) Route context via SSE and LLM calls through Cloudera AI.
-7) Output the Agent’s answer to your console.
 
 ### Example run
 ```

@@ -12,7 +12,6 @@ IMPALA_PASSWORD = "<password>"
 
 # Installation & Usage
 ```bash
-uv pip install .
 FASTMCP_PORT=8000 uv run start-server.py
 ```
 
